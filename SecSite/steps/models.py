@@ -11,7 +11,12 @@ class Spare(models.Model):
 class Machine(models.Model):
 	name = models.CharField(max_length = 30)
 	spares = models.ManyToManyField(Spare)
-
+class ClassName(object):
+	"""docstring for ClassName"""
+	def __init__(self, arg):
+		super(ClassName, self).__init__()
+		self.arg = arg
+		
 class Steps(models.Model):
 	title = models.CharField(verbose_name = 'Название проекта', max_length = 100)
 	content = models.TextField(verbose_name = 'Описание работы', null = True, blank = True)
